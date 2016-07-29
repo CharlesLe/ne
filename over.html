@@ -1,0 +1,15 @@
+var time = 30;
+    var isPause = true;
+    document.querySelectorAll("button")[0].onclick = function(){
+        isPause = false;
+    }
+    document.querySelectorAll("button")[1].onclick = function(){
+        isPause = true;
+    }
+    setInterval(function(){
+        if(!isPause){
+            time -= 0.01;
+            document.querySelector("span").innerHTML = (time.toFixed(2));
+        }
+
+    },10)
